@@ -32,20 +32,6 @@ app.get("/",(request,response)=>{
 
 app.use('/api/user',userRouter)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 connectDB().then(()=>{
     app.listen(PORT,()=>{
         console.log("Server is running",PORT)
