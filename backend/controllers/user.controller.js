@@ -1,6 +1,6 @@
+import sendEmail from '../config/sendEmail.js'
 import UserModel from '../models/user.model.js'
 import bcryptjs from 'bcryptjs'
-import sendEmail from '../config/sendEmail.js'
 import verifyEmailTemplate from '../utils/verifyEmailTemplate.js'
 import generatedAccessToken from '../utils/generatedAccessToken.js'
 import genertedRefreshToken from '../utils/generatedRefreshToken.js'
@@ -8,7 +8,6 @@ import uploadImageClodinary from '../utils/uploadImageClodinary.js'
 import generatedOtp from '../utils/generatedOtp.js'
 import forgotPasswordTemplate from '../utils/forgotPasswordTemplate.js'
 import jwt from 'jsonwebtoken'
-
 
 export async function registerUserController(request,response){
     try {
@@ -21,8 +20,8 @@ export async function registerUserController(request,response){
                 success : false
             })
         }
-    
-    const user = await UserModel.findOne({ email })
+
+        const user = await UserModel.findOne({ email })
 
         if(user){
             return response.json({
@@ -43,7 +42,7 @@ export async function registerUserController(request,response){
 
         const newUser = new UserModel(payload)
         const save = await newUser.save()
-        
+
         const VerifyEmailUrl = `${process.env.FRONTEND_URL}/verify-email?code=${save?._id}`
 
         const verifyEmail = await sendEmail({
@@ -62,23 +61,13 @@ export async function registerUserController(request,response){
             data : save
         })
 
-
-
-
-
-
-    }
-
-    catch (error) {
+    } catch (error) {
         return response.status(500).json({
             message : error.message || error,
             error : true,
             success : false
         })
     }
-
-
-
 }
 
 export async function verifyEmailController(request,response){
@@ -100,7 +89,7 @@ export async function verifyEmailController(request,response){
         })
 
         return response.json({
-            message : "Email Verification done",
+            message : "Verify email done",
             success : true,
             error : false
         })
@@ -113,7 +102,7 @@ export async function verifyEmailController(request,response){
     }
 }
 
-//login 
+//login controller
 export async function loginController(request,response){
     try {
         const { email , password } = request.body
@@ -189,7 +178,7 @@ export async function loginController(request,response){
     }
 }
 
-//logout
+//logout controller
 export async function logoutController(request,response){
     try {
         const userid = request.userId //middleware
@@ -234,7 +223,7 @@ export async  function uploadAvatar(request,response){
         })
 
         return response.json({
-            message : "Profile Image Uploaded",
+            message : "upload profile",
             success : true,
             error : false,
             data : {
@@ -252,6 +241,7 @@ export async  function uploadAvatar(request,response){
     }
 }
 
+//update user details
 export async function updateUserDetails(request,response){
     try {
         const userId = request.userId //auth middleware
@@ -288,6 +278,7 @@ export async function updateUserDetails(request,response){
     }
 }
 
+//forgot password not login
 export async function forgotPasswordController(request,response) {
     try {
         const { email } = request.body 
@@ -320,7 +311,7 @@ export async function forgotPasswordController(request,response) {
         })
 
         return response.json({
-            message : "OTP sent to email",
+            message : "check your email",
             error : false,
             success : true
         })
@@ -334,6 +325,7 @@ export async function forgotPasswordController(request,response) {
     }
 }
 
+//verify forgot password otp
 export async function verifyForgotPasswordOtp(request,response){
     try {
         const { email , otp }  = request.body
@@ -383,7 +375,7 @@ export async function verifyForgotPasswordOtp(request,response){
         })
         
         return response.json({
-            message : "OTP verified successfully",
+            message : "Verify otp successfully",
             error : false,
             success : true
         })
@@ -397,6 +389,7 @@ export async function verifyForgotPasswordOtp(request,response){
     }
 }
 
+//reset the password
 export async function resetpassword(request,response){
     try {
         const { email , newPassword, confirmPassword } = request.body 
@@ -447,6 +440,8 @@ export async function resetpassword(request,response){
     }
 }
 
+
+//refresh token controler
 export async function refreshToken(request,response){
     try {
         const refreshToken = request.cookies.refreshToken || request?.headers?.authorization?.split(" ")[1]  /// [ Bearer token]
