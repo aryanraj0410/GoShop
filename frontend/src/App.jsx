@@ -65,7 +65,7 @@ function App() {
     fetchUser()
     fetchCategory()
     fetchSubCategory()
-    // fetchCartItem()
+    //fetchCartItem()
   },[])
 
   return (
