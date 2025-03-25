@@ -29,12 +29,12 @@ const Home = () => {
 
 
   return (
-   <section className='bg-white'>
+   <section className='bg-yellow-400'>
       <div className='container mx-auto'>
           <div className={`w-full h-full min-h-48 bg-blue-100 rounded ${!banner && "animate-pulse my-2" } `}>
               <img
                 src={banner}
-                className='w-full h-full hidden lg:block'
+                className='w-full h-full hidden lg:block bg'
                 alt='banner' 
               />
               <img

@@ -24,3 +24,11 @@ dist-ssr
 *.sw?
 
 
+# Changes made for uploading in github
+
+backend/node_modules
+frontend/node_modules
+
+backend/.env
+frontend/.env
+
