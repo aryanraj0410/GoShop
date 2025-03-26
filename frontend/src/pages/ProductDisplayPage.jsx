@@ -133,7 +133,7 @@ const ProductDisplayPage = () => {
             <div>
               <p className=''>Price</p> 
               <div className='flex items-center gap-2 lg:gap-4'>
-                <div className='border border-green-600 px-4 py-2 rounded bg-green-50 w-fit'>
+                <div className='border border-[#2cb8cb] px-4 py-2 rounded bg-green-50 w-fit'>
                     <p className='font-semibold text-lg lg:text-xl'>{DisplayPriceInRupees(pricewithDiscount(data.price,data.discount))}</p>
                 </div>
                 {
@@ -143,7 +143,7 @@ const ProductDisplayPage = () => {
                 }
                 {
                   data.discount && (
-                    <p className="font-bold text-green-600 lg:text-2xl">{data.discount}% <span className='text-base text-neutral-500'>Discount</span></p>
+                    <p className="font-bold text-[#2cb8cb] lg:text-2xl">{data.discount}% <span className='text-base text-neutral-500'>Discount</span></p>
                   )
                 }
                 

@@ -92,7 +92,7 @@ const ResetPassword = () => {
                 <form className='grid gap-4 py-4' onSubmit={handleSubmit}>
                     <div className='grid gap-1'>
                         <label htmlFor='newPassword'>New Password :</label>
-                        <div className='bg-blue-50 p-2 border rounded flex items-center focus-within:border-primary-200'>
+                        <div className='bg-blue-50 p-2 border rounded flex items-center focus-within:border-[#2cb8cb]'>
                             <input
                                 type={showPassword ? "text" : "password"}
                                 id='password'
@@ -116,7 +116,7 @@ const ResetPassword = () => {
 
                     <div className='grid gap-1'>
                         <label htmlFor='confirmPassword'>Confirm Password :</label>
-                        <div className='bg-blue-50 p-2 border rounded flex items-center focus-within:border-primary-200'>
+                        <div className='bg-blue-50 p-2 border rounded flex items-center focus-within:border-[#2cb8cb]'>
                             <input
                                 type={showConfirmPassword ? "text" : "password"}
                                 id='password'
@@ -138,12 +138,12 @@ const ResetPassword = () => {
                         </div>
                     </div>
              
-                    <button disabled={!valideValue} className={` ${valideValue ? "bg-green-800 hover:bg-green-700" : "bg-gray-500" }    text-white py-2 rounded font-semibold my-3 tracking-wide`}>Change Password</button>
+                    <button disabled={!valideValue} className={` ${valideValue ? "bg-[#2cb8cb] hover:bg-[#5dbcc8]" : "bg-gray-500" }    text-white py-2 rounded font-semibold my-3 tracking-wide`}>Change Password</button>
 
                 </form>
 
                 <p>
-                    Already have account? <Link to={"/login"} className='font-semibold text-green-700 hover:text-green-800'>Login</Link>
+                    Already have account? <Link to={"/login"} className='font-semibold text-[#2cb8cb] hover:text-[#5dbcc8]'>Login</Link>
                 </p>
             </div>
         </section>

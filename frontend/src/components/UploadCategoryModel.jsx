@@ -84,7 +84,7 @@ const UploadCategoryModel = ({close, fetchData}) => {
                         value={data.name}
                         name='name'
                         onChange={handleOnChange}
-                        className='bg-blue-50 p-2 border border-blue-100 focus-within:border-primary-200 outline-none rounded'
+                        className='bg-blue-50 p-2 border border-blue-100 focus-within:border-[#2cb8cb] outline-none rounded'
                     />
                 </div>
                 <div className='grid gap-1'>
@@ -106,7 +106,7 @@ const UploadCategoryModel = ({close, fetchData}) => {
                         </div>
                         <label htmlFor='uploadCategoryImage'>
                             <div  className={`
-                            ${!data.name ? "bg-gray-300" : "border-primary-200 hover:bg-primary-100" }  
+                            ${!data.name ? "bg-gray-300" : "border-[#2cb8cb] hover:bg-[#5dbcc8]" }  
                                 px-4 py-2 rounded cursor-pointer border font-medium
                             `}>Upload Image</div>
 
@@ -118,7 +118,7 @@ const UploadCategoryModel = ({close, fetchData}) => {
 
                 <button
                     className={`
-                    ${data.name && data.image ? "bg-primary-200 hover:bg-primary-100" : "bg-gray-300 "}
+                    ${data.name && data.image ? "bg-[#2cb8cb] hover:bg-[#5dbcc8]" : "bg-gray-300 "}
                     py-2    
                     font-semibold 
                     `}

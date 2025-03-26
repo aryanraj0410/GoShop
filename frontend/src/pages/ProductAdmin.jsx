@@ -114,9 +114,9 @@ const ProductAdmin = () => {
             </div>
             
             <div className='flex justify-between my-4'>
-              <button onClick={handlePrevious} className="border border-primary-200 px-4 py-1 hover:bg-primary-200">Previous</button>
+              <button onClick={handlePrevious} className="border border-[#2cb8cb] hover:bg-[#5dbcc8]">Previous</button>
               <button className='w-full bg-slate-100'>{page}/{totalPageCount}</button>
-              <button onClick={handleNext} className="border border-primary-200 px-4 py-1 hover:bg-primary-200">Next</button>
+              <button onClick={handleNext} className="border border-[#2cb8cb] px-4 py-1 hover:bg-[#5dbcc8]">Next</button>
             </div>
 
         </div>

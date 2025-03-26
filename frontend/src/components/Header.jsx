@@ -11,6 +11,7 @@ import UserMenu from './UserMenu';
 import { DisplayPriceInRupees } from '../utils/DisplayPriceInRupees';
 import { useGlobalContext } from '../provider/GlobalProvider';
 import DisplayCartItem from './DisplayCartItem';
+import g from '../assets/g.png'
 
 const Header = () => {
     const [ isMobile ] = useMobile()
@@ -57,7 +58,7 @@ const Header = () => {
     // },[cartItem])
 
   return (
-    <header className='h-24 lg:h-20 lg:shadow-md sticky top-0 z-40 flex flex-col justify-center gap-1 bg-green-800'>
+    <header className='h-24 lg:h-20 lg:shadow-md sticky top-0 z-40 flex flex-col justify-center gap-1 bg-[#f9f9f9]'>
         {
             !(isSearchPage && isMobile) && (
                 <div className='container mx-auto flex items-center px-2 justify-between'>
@@ -65,7 +66,7 @@ const Header = () => {
                                 <div className='h-full'>
                                     <Link to={"/"} className='h-full flex justify-center items-center'>
                                         <img 
-                                            src={logo}
+                                            src={g}
                                             width={170}
                                             height={60}
                                             alt='logo'
@@ -122,10 +123,10 @@ const Header = () => {
                                                     
                                                 </div>
                                             ) : (
-                                                <button onClick={redirectToLoginPage} className='text-lg px-2'>Login</button>
+                                                <button onClick={redirectToLoginPage} className='text-lg px-2 font-semibold'>Login</button>
                                             )
                                         }
-                                        <button onClick={()=>setOpenCartSection(true)} className='flex items-center gap-2 bg-green-800 hover:bg-green-700 px-3 py-2 rounded text-white'>
+                                        <button onClick={()=>setOpenCartSection(true)} className='flex items-center gap-2 bg-[#2cb8cb] hover:bg-[#56c4d2] px-3 py-2 rounded text-white'>
                                             {/**add to card icons */}
                                             <div className='animate-bounce'>
                                                 <BsCart4 size={26}/>

@@ -94,7 +94,7 @@ const OtpVerification = () => {
 
                                             }}
                                             maxLength={1}
-                                            className='bg-blue-50 w-full max-w-16 p-2 border rounded outline-none focus:border-primary-200 text-center font-semibold'
+                                            className='bg-blue-50 w-full max-w-16 p-2 border rounded outline-none focus:border-[#2cb8cb] text-center font-semibold'
                                         />
                                     )
                                 })
@@ -103,12 +103,12 @@ const OtpVerification = () => {
                         
                     </div>
              
-                    <button disabled={!valideValue} className={` ${valideValue ? "bg-green-800 hover:bg-green-700" : "bg-gray-500" }    text-white py-2 rounded font-semibold my-3 tracking-wide`}>Verify OTP</button>
+                    <button disabled={!valideValue} className={` ${valideValue ? "bg-[#2cb8cb] hover:bg-[#56c4d2]" : "bg-gray-500" }    text-white py-2 rounded font-semibold my-3 tracking-wide`}>Verify OTP</button>
 
                 </form>
 
                 <p>
-                    Already have account? <Link to={"/login"} className='font-semibold text-green-700 hover:text-green-800'>Login</Link>
+                    Already have account? <Link to={"/login"} className='font-semibold text-[#2cb8cb] hover:text-[#56c4d2]'>Login</Link>
                 </p>
             </div>
         </section>

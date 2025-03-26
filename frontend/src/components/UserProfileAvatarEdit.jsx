@@ -64,7 +64,7 @@ const UserProfileAvatarEdit = ({close}) => {
             </div>
             <form onSubmit={handleSubmit}>
                 <label htmlFor='uploadProfile'>
-                    <div className='border border-primary-200 cursor-pointer hover:bg-primary-200 px-4 py-1 rounded text-sm my-3'>
+                    <div className='border border-[#2cb8cb] cursor-pointer hover:bg-[#2cb8cb] px-4 py-1 rounded text-sm my-3'>
                         {
                             loading ? "Loading..." : "Upload"
                         }

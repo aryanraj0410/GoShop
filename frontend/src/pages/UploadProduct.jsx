@@ -163,7 +163,7 @@ const UploadProduct = () => {
                     value={data.name}
                     onChange={handleChange}
                     required
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-[#2cb8cb] rounded'
                   />
                 </div>
                 <div className='grid gap-1'>
@@ -178,7 +178,7 @@ const UploadProduct = () => {
                     required
                     multiple 
                     rows={3}
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded resize-none'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-[#2cb8cb] rounded resize-none'
                   />
                 </div>
                 <div>
@@ -325,7 +325,7 @@ const UploadProduct = () => {
                     value={data.unit}
                     onChange={handleChange}
                     required
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-[#2cb8cb] rounded'
                   />
                 </div>
 
@@ -339,7 +339,7 @@ const UploadProduct = () => {
                     value={data.stock}
                     onChange={handleChange}
                     required
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-[#2cb8cb] rounded'
                   />
                 </div>
 
@@ -353,7 +353,7 @@ const UploadProduct = () => {
                     value={data.price}
                     onChange={handleChange}
                     required
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-[#2cb8cb] rounded'
                   />
                 </div>
 
@@ -367,7 +367,7 @@ const UploadProduct = () => {
                     value={data.discount}
                     onChange={handleChange}
                     required
-                    className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                    className='bg-blue-50 p-2 outline-none border focus-within:border-[#2cb8cb] rounded'
                   />
                 </div>
 
@@ -395,19 +395,19 @@ const UploadProduct = () => {
                                   })
                               }}
                               required
-                              className='bg-blue-50 p-2 outline-none border focus-within:border-primary-200 rounded'
+                              className='bg-blue-50 p-2 outline-none border focus-within:border-[#2cb8cb] rounded'
                             />
                           </div>
                         )
                     })
                   }
 
-                <div onClick={()=>setOpenAddField(true)} className=' hover:bg-primary-200 bg-white py-1 px-3 w-32 text-center font-semibold border border-primary-200 hover:text-neutral-900 cursor-pointer rounded'>
+                <div onClick={()=>setOpenAddField(true)} className=' hover:bg-[#2cb8cb] bg-white py-1 px-3 w-32 text-center font-semibold border border-primary-200 hover:text-neutral-900 cursor-pointer rounded'>
                   Add Fields
                 </div>
 
                 <button
-                  className='bg-primary-100 hover:bg-primary-200 py-2 rounded font-semibold'
+                  className='bg-[#2cb8cb] hover:bg-[#5dbcc8] py-2 rounded font-semibold'
                 >
                   Submit
                 </button>

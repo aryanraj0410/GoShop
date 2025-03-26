@@ -116,7 +116,7 @@ const EditAddressDetails = ({close, data}) => {
                     />
                 </div>
 
-                <button type='submit' className='bg-primary-200 w-full  py-2 font-semibold mt-4 hover:bg-primary-100'>Submit</button>
+                <button type='submit' className='bg-[#2cb8cb] w-full  py-2 font-semibold mt-4 hover:bg-[#5dbcc8]'>Submit</button>
             </form>
         </div>
     </section>

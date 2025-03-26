@@ -100,7 +100,7 @@ const EditSubCategory = ({close,data,fetchData}) => {
                             name='name'
                             value={subCategoryData.name}
                             onChange={handleChange}
-                            className='p-3 bg-blue-50 border outline-none focus-within:border-primary-200 rounded '
+                            className='p-3 bg-blue-50 border outline-none focus-within:border-[#2cb8cb] rounded '
                         />
                     </div>
                     <div className='grid gap-1'>
@@ -120,7 +120,7 @@ const EditSubCategory = ({close,data,fetchData}) => {
                                 }
                             </div>
                             <label htmlFor='uploadSubCategoryImage'>
-                                <div className='px-4 py-1 border border-primary-100 text-primary-200 rounded hover:bg-primary-200 hover:text-neutral-900 cursor-pointer  '>
+                                <div className='px-4 py-1 border border-[#2cb8cb] text-[#2cb8cb] hover:bg-[#5dbcc8] hover:text-neutral-900 cursor-pointer  '>
                                     Upload Image
                                 </div>
                                 <input 
@@ -135,7 +135,7 @@ const EditSubCategory = ({close,data,fetchData}) => {
                     </div>
                     <div className='grid gap-1'>
                         <label>Select Category</label>
-                        <div className='border focus-within:border-primary-200 rounded'>
+                        <div className='border focus-within:border-[#2cb8cb] rounded'>
                             {/*display value**/}
                             <div className='flex flex-wrap gap-2'>
                                 {
@@ -181,7 +181,7 @@ const EditSubCategory = ({close,data,fetchData}) => {
 
                     <button
                         className={`px-4 py-2 border
-                            ${subCategoryData?.name && subCategoryData?.image && subCategoryData?.category[0] ? "bg-primary-200 hover:bg-primary-100" : "bg-gray-200"}    
+                            ${subCategoryData?.name && subCategoryData?.image && subCategoryData?.category[0] ? "bg-[#2cb8cb] hover:bg-[#5dbcc8]" : "bg-gray-200"}    
                             font-semibold
                         `}
                     >
